@@ -1,0 +1,1001 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #222;
+    line-height: 1.5;
+}
+
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+.menu a,
+.telefon,
+.logo span,
+button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo span {
+    font-weight: 700;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#kontakt,
+.slep-list li {
+    scroll-margin-top: 90px;
+}
+
+
+
+.header {
+    background: #111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 45px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: red;
+}
+
+.telefon {
+    background: red;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown > a {
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 230px;
+    padding: 5px 0;
+
+    background: #111;
+    list-style: none;
+
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    position: relative;
+}
+
+.dropdown-menu a {
+    display: block;
+    margin: 0;
+    padding: 12px 18px;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background: #222;
+    color: red;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.submenu {
+    top: 0;
+    left: 100%;
+    border-radius: 6px;
+}
+
+.dropdown-sub:hover > .submenu {
+    display: block;
+}
+
+
+
+.hero {
+    position: relative;
+    height: 100vh;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-left: 50px;
+    text-align: left;
+
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero h1,
+.hero p,
+.hero button {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    width: 220px;
+    padding: 15px;
+    background: red;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background: darkred;
+}
+
+
+
+.about {
+    background: #f5f5f5;
+    padding: 80px 50px;
+}
+
+.about-content {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-logo {
+    flex: 1;
+    text-align: center;
+}
+
+.about-logo img {
+    width: 180px;
+}
+
+
+
+.contact-info {
+    background: #111;
+    color: white;
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.contact-info h2 {
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.info-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    font-size: 18px;
+}
+
+
+
+.page-title {
+    background: #111;
+    color: white;
+    padding: 60px;
+    text-align: center;
+}
+
+.page-title h1 {
+    font-size: 40px;
+}
+
+
+.services {
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: #f5f5f5;
+}
+
+.service-box {
+    position: relative;
+
+    width: 280px;
+    min-height: 220px;
+    padding: 30px;
+
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: 0.4s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.service-box h2,
+.service-box p {
+    position: relative;
+    z-index: 2;
+}
+
+.service-box h2 {
+    margin-bottom: 15px;
+}
+
+.service-box p {
+    line-height: 1.5;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.service-box:hover h2,
+.service-box:hover p {
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.service-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: 0.4s;
+    z-index: 1;
+}
+
+.service-box:hover::before {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+
+
+.slep-services {
+    padding: 60px 50px;
+    background: #f5f5f5;
+}
+
+.slep-services h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+}
+
+.slep-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 0;
+}
+
+.slep-list li {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s, box-shadow 0.3s;
+    scroll-margin-top: 20px;
+}
+
+.slep-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.slep-list img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.slep-text h2 {
+    margin-bottom: 10px;
+}
+
+.slep-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.slep-text button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.slep-text button:hover {
+    background: darkred;
+    transform: scale(1.05);
+}
+
+
+
+.kontakt-forma {
+    background: #f5f5f5;
+    padding: 60px 50px;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.kontakt-forma h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.kontakt-forma form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.kontakt-forma input,
+.kontakt-forma textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    resize: vertical;
+}
+
+.kontakt-forma button {
+    padding: 15px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.kontakt-forma button:hover {
+    background: darkred;
+}
+
+
+
+.galerija {
+    padding: 60px 50px;
+    background: #f5f5f5;
+}
+
+.filteri {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 10px 22px;
+    background: white;
+    color: #111;
+    border: 2px solid #111;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.filter-btn:hover {
+    border-color: red;
+    color: red;
+}
+
+.filter-btn.active {
+    background: red;
+    border-color: red;
+    color: white;
+}
+
+.galerija-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.galerija-item {
+    height: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.galerija-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.galerija-item:hover img {
+    transform: scale(1.1);
+}
+
+.galerija-item.sakriveno {
+    display: none;
+}
+
+
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+    align-items: center;
+    justify-content: center;
+    z-index: 5000;
+}
+
+.lightbox.otvoren {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 6px;
+}
+
+.lb-zatvori,
+.lb-strelica {
+    position: absolute;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.lb-zatvori:hover,
+.lb-strelica:hover {
+    color: red;
+}
+
+.lb-zatvori {
+    top: 20px;
+    right: 30px;
+    font-size: 34px;
+}
+
+.lb-strelica {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 70px;
+    padding: 0 20px;
+}
+
+.lb-prev { left: 10px; }
+.lb-next { right: 10px; }
+
+
+
+
+.forma-poruka {
+    display: none;
+    padding: 12px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.forma-poruka.uspeh {
+    display: block;
+    background: #e6f4ea;
+    color: #1e7e34;
+}
+
+.forma-poruka.greska {
+    display: block;
+    background: #fdecea;
+    color: #b71c1c;
+}
+
+.kontakt-forma button:disabled {
+    background: #999;
+    cursor: wait;
+}
+
+.skriveno-polje {
+    display: none;
+}
+
+
+
+.brojaci {
+    background: red;
+    color: white;
+    padding: 50px;
+}
+
+.brojaci-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    text-align: center;
+}
+
+.brojac-broj {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.brojac-tekst {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+
+.faq {
+    background: white;
+    padding: 80px 50px;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.faq-lista {
+    max-width: 800px;
+    margin: auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-pitanje {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    padding: 20px 10px;
+
+    background: none;
+    border: none;
+
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+    color: #111;
+
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.faq-pitanje:hover {
+    color: red;
+}
+
+.faq-pitanje::after {
+    content: "+";
+    font-size: 28px;
+    line-height: 1;
+    color: red;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+}
+
+.faq-item.open .faq-pitanje::after {
+    content: "−";
+}
+
+.faq-odgovor {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.faq-odgovor p {
+    padding: 0 10px 20px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+
+.nazad-na-vrh {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    background: red;
+    color: white;
+
+    border: none;
+    border-radius: 50%;
+
+    font-size: 24px;
+    line-height: 1;
+
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+
+    transition: opacity 0.3s, transform 0.3s, visibility 0.3s, background 0.3s;
+
+    z-index: 1500;
+}
+
+.nazad-na-vrh.vidljivo {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nazad-na-vrh:hover {
+    background: darkred;
+}
+
+
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-size: 26px;
+    line-height: 1;
+    padding: 4px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.only-mobile {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+  
+    .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 0;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    .menu a {
+        display: block;
+        margin: 0;
+        padding: 12px 10px;
+    }
+
+    .telefon {
+        width: 100%;
+        text-align: center;
+    }
+
+    
+    .dropdown > .dropdown-menu,
+    .dropdown:hover > .dropdown-menu,
+    .dropdown-sub:hover > .submenu {
+        display: none;
+    }
+
+    .dropdown.open > .dropdown-menu,
+    .dropdown-sub.open > .submenu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        position: static;
+        min-width: 0;
+        padding: 0 0 0 15px;
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .dropdown-menu a {
+        padding: 10px;
+        font-weight: normal;
+    }
+
+    .only-mobile {
+        display: block;
+    }
+
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .service-box {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .slep-list li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .slep-list img {
+        width: 100%;
+        height: auto;
+    }
+
+    .slep-text button {
+        width: 80%;
+    }
+
+    .kontakt-forma {
+        padding: 40px 20px;
+    }
+
+        .galerija {
+        padding: 40px 20px;
+    }
+
+    .lb-strelica {
+        font-size: 50px;
+        padding: 0 10px;
+    }
+
+        .header {
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+
+        .brojaci {
+        padding: 40px 20px;
+    }
+
+    .brojaci-grid {
+        flex-wrap: wrap;
+    }
+
+    .brojaci-grid > div {
+        width: 45%;
+    }
+
+    .brojac-broj {
+        font-size: 36px;
+    }
+
+    .faq {
+        padding: 50px 20px;
+    }
+
+    .faq h2 {
+        font-size: 28px;
+    }
+
+    .faq-pitanje {
+        font-size: 16px;
+    }
+
+    .nazad-na-vrh {
+        right: 15px;
+        bottom: 15px;
+    }
+
+}
+
+/* ========== USLUGE - RED KARTICA ========== */
+
+.usluge-red {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+
+    padding: 60px;
+    background: #f5f5f5;
+}
+
+@media (max-width: 768px) {
+    .usluge-red {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+    }
+}
