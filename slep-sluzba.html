@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Šlep služba | Auto Servis & Šlep 24/7</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">
+        <img src="img/logo.jpeg" alt="Logo">
+        <span>Auto Servis & Šlep 24/7</span>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Meni">☰</button>
+
+    <nav class="menu" id="menu">
+        <a href="index.html">Početna</a>
+
+        <div class="dropdown">
+            <a href="usluge.html">Usluge ▾</a>
+
+            <ul class="dropdown-menu">
+                <li class="only-mobile"><a href="usluge.html">Sve usluge</a></li>
+
+                <li class="dropdown-sub">
+                    <a href="slep-sluzba.html">Šlep služba ›</a>
+
+                    <ul class="dropdown-menu submenu">
+                        <li><a href="slep-sluzba.html#slepanje">Šlepanje vozila</a></li>
+                        <li><a href="slep-sluzba.html#pomoc">Pomoć na putu</a></li>
+                        <li><a href="slep-sluzba.html#uvoz">Uvoz auta iz Evrope</a></li>
+                        <li><a href="slep-sluzba.html#papiri">Pomoć oko papira</a></li>
+                    </ul>
+                </li>
+                <li><a href="usluge.html">Auto servis</a></li>
+                <li><a href="usluge.html">Dijagnostika</a></li>
+            </ul>
+        </div>
+
+        <a href="galerija.html">Galerija</a>
+        <a href="index.html#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="telefon">
+        📞 062/199-92-26
+    </div>
+</header>
+
+<section class="slep-services">
+    <div class="container">
+        <h1>Naše usluge u okviru šlep službe</h1>
+
+        <ul class="slep-list">
+            <li id="slepanje">
+                <img src="img/slep1.jpg" alt="Šlepanje vozila">
+                <div class="slep-text">
+                    <h2>Šlepanje vozila</h2>
+                    <p>Brz i siguran transport vašeg vozila do željene destinacije.</p>
+                    <button onclick="pozovi()">POZOVI ODMAH</button>
+                </div>
+            </li>
+
+            <li id="pomoc">
+                <img src="img/uvoz.jpg" alt="Pomoć na putu">
+                <div class="slep-text">
+                    <h2>Pomoć na putu</h2>
+                    <p>Brza intervencija za kvarove i hitne situacije na putu.</p>
+                    <button onclick="pozovi()">POZOVI ODMAH</button>
+                </div>
+            </li>
+
+            <li id="uvoz">
+                <img src="img/uvozz.jpg" alt="Uvoz auta iz Evrope">
+                <div class="slep-text">
+                    <h2>Uvoz auta iz Evrope</h2>
+                    <p>Pomoć pri kupovini i transportu vozila iz inostranstva.</p>
+                    <button onclick="pozovi()">POZOVI ODMAH</button>
+                </div>
+            </li>
+
+            <li id="papiri">
+                <img src="img/papiri.jpg" alt="Pomoć oko papira">
+                <div class="slep-text">
+                    <h2>Pomoć oko papira</h2>
+                    <p>Pomoć oko registracije, carine i izrade dokumenata za uvoz.</p>
+                    <button onclick="pozovi()">POZOVI ODMAH</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+</body>
+</html>

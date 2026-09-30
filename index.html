@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Servis & Šlep 24/7</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">
+        <img src="img/logo.jpeg" alt="Logo">
+        <span>Auto Servis & Šlep 24/7</span>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Meni">☰</button>
+
+    <nav class="menu" id="menu">
+        <a href="index.html">Početna</a>
+
+        <div class="dropdown">
+            <a href="usluge.html">Usluge ▾</a>
+
+            <ul class="dropdown-menu">
+                <li class="only-mobile"><a href="usluge.html">Sve usluge</a></li>
+
+                <li class="dropdown-sub">
+                    <a href="slep-sluzba.html">Šlep služba ›</a>
+
+                    <ul class="dropdown-menu submenu">
+                        <li><a href="slep-sluzba.html#slepanje">Šlepanje vozila</a></li>
+                        <li><a href="slep-sluzba.html#pomoc">Pomoć na putu</a></li>
+                        <li><a href="slep-sluzba.html#uvoz">Uvoz auta iz Evrope</a></li>
+                        <li><a href="slep-sluzba.html#papiri">Pomoć oko papira</a></li>
+                    </ul>
+                </li>
+                <li><a href="usluge.html">Auto servis</a></li>
+                <li><a href="usluge.html">Dijagnostika</a></li>
+            </ul>
+        </div>
+
+        <a href="galerija.html">Galerija</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="telefon">
+        📞 062/199-92-26
+    </div>
+</header>
+
+<section class="hero">
+    <img src="img/slep-hero.jpg" class="hero-slide active" alt="Hero 1">
+    <img src="img/car1.jpg" class="hero-slide" alt="Hero 2">
+    <img src="img/car2.jpg" class="hero-slide" alt="Hero 3">
+
+    <h1>Šlep služba i auto servis<br>dostupni 24/7</h1>
+    <p>Brza i pouzdana pomoć na putu</p>
+    <button onclick="pozovi()">POZOVI ODMAH</button>
+</section>
+
+<section class="brojaci">
+    <div class="brojaci-grid">
+        <div>
+            <div class="brojac-broj" data-target="24" data-suffix="/7">0</div>
+            <div class="brojac-tekst">Dostupni non-stop</div>
+        </div>
+
+        <div>
+            <div class="brojac-broj" data-target="500" data-suffix="+">0</div>
+            <div class="brojac-tekst">Odšlepanih vozila</div>
+        </div>
+
+        <div>
+            <div class="brojac-broj" data-target="10" data-suffix="+">0</div>
+            <div class="brojac-tekst">Godina iskustva</div>
+        </div>
+
+        <div>
+            <div class="brojac-broj" data-target="30" data-suffix=" min">0</div>
+            <div class="brojac-tekst">Prosečno vreme dolaska</div>
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <div class="about-content">
+        <div class="about-text">
+            <h2>O nama</h2>
+            <p>
+                Auto Servis & Šlep 24/7 osnovan je sa ciljem da vozačima
+                pruži brzu, sigurnu i pouzdanu pomoć na putu u svakom trenutku.
+                Višegodišnje iskustvo i moderna oprema čine nas pravim izborom
+                kada vam je pomoć najpotrebnija.
+            </p>
+        </div>
+
+        <div class="about-logo">
+            <img src="img/logo.jpeg" alt="Logo">
+        </div>
+    </div>
+</section>
+
+<section class="faq">
+    <h2>Česta pitanja</h2>
+
+    <div class="faq-lista">
+
+        <div class="faq-item">
+            <button class="faq-pitanje">Koliko brzo stižete do mene?</button>
+            <div class="faq-odgovor">
+                <p>Na poziv reagujemo odmah. Vreme dolaska zavisi od udaljenosti, a na teritoriji grada obično stižemo u roku od pola sata.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-pitanje">Da li radite noću i vikendom?</button>
+            <div class="faq-odgovor">
+                <p>Da, šlep služba radi 24 sata dnevno, 7 dana u nedelji, uključujući praznike.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-pitanje">Koliko košta šlepanje?</button>
+            <div class="faq-odgovor">
+                <p>Cena zavisi od razdaljine i vrste vozila. Pozovite nas, pa ćete odmah dobiti okvirnu cenu pre nego što krenemo.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-pitanje">Da li šlepujete po celoj Srbiji?</button>
+            <div class="faq-odgovor">
+                <p>Da, prevozimo vozila na teritoriji cele Srbije, a po dogovoru i van granica zemlje.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-pitanje">Možete li mi pomoći oko uvoza auta iz Evrope?</button>
+            <div class="faq-odgovor">
+                <p>Naravno. Pomažemo pri kupovini i transportu vozila, kao i oko carine, registracije i potrebne dokumentacije.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-pitanje">Šta ako mi je vozilo ostalo na putu i ne znam tačno gde sam?</button>
+            <div class="faq-odgovor">
+                <p>Pozovite nas i opišite okolinu (naselje, putokaz, benzinska pumpa). Možete nam poslati i lokaciju preko telefona, pa ćemo vas lakše pronaći.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact-info" id="kontakt">
+    <h2>Kontakt informacije</h2>
+
+    <div class="info-grid">
+        <div>
+            <strong>📍 Adresa:</strong><br>
+            Vranje, Srbija
+        </div>
+
+        <div>
+            <strong>📞 Telefon:</strong><br>
+            062/199-92-26
+        </div>
+
+        <div>
+            <strong>✉ Email:</strong><br>
+            info@autoservis.rs
+        </div>
+    </div>
+</section>
+
+<section class="kontakt-forma">
+    <h2>Pošaljite nam poruku</h2>
+
+    <form id="contactForm">
+        <input type="hidden" name="access_key" value="f0165eb0-2f01-420d-afba-5cde49ac2ec7">
+        <input type="hidden" name="subject" value="Nova poruka sa sajta Auto Servis & Šlep 24/7">
+        <input type="checkbox" name="botcheck" class="skriveno-polje" tabindex="-1" autocomplete="off">
+
+        <label for="ime">Ime i prezime:</label>
+        <input type="text" id="ime" name="name" placeholder="Vaše ime i prezime" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Vaš email" required>
+
+        <label for="poruka">Poruka:</label>
+        <textarea id="poruka" name="message" placeholder="Vaša poruka" required></textarea>
+
+        <button type="submit">Pošalji</button>
+
+        <div class="forma-poruka" id="formaPoruka"></div>
+    </form>
+</section>
+
+</body>
+</html>
